@@ -1,6 +1,32 @@
 # What is Amazon S3?<a name="Welcome"></a>
 
-Amazon Simple Storage Service \(Amazon S3\) is an object storage service that offers industry\-leading scalability, data availability, security, and performance\. Customers of all sizes and industries can use Amazon S3 to store and protect any amount of data for a range of use cases, such as data lakes, websites, mobile applications, backup and restore, archive, enterprise applications, IoT devices, and big data analytics\. Amazon S3 provides management features so that you can optimize, organize, and configure access to your data to meet your specific business, organizational, and compliance requirements\.
+* Amazon Simple Storage Service \(Amazon S3\)
+  * == object storage service /
+    * provides
+      * industry-leading scalability,
+      * data availability,
+      * security,
+      * performance
+      * management features
+        * optimize,
+        * organize,
+        * configure access | your data / meet your requirements, from perspective
+          * business,
+          * organizational,
+          * compliance 
+  * uses
+    * ALL sizes
+    * ALL industries
+  * use cases
+    * data lakes,
+    * websites,
+    * mobile applications,
+    * backup
+    * restore,
+    * archive,
+    * enterprise applications,
+    * IoT devices,
+    * big data analytics
 
 **Topics**
 + [Features of Amazon S3](#S3Features)
@@ -15,6 +41,7 @@ Amazon Simple Storage Service \(Amazon S3\) is an object storage service that of
 
 ### Storage classes<a name="RRS"></a>
 
+* TODO:
 Amazon S3 offers a range of storage classes designed for different use cases\. For example, you can store mission\-critical production data in S3 Standard for frequent access, save costs by storing infrequently accessed data in S3 Standard\-IA or S3 One Zone\-IA, and archive data at the lowest costs in S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive\. 
 
 You can store data with changing or unknown access patterns in S3 Intelligent\-Tiering, which optimizes storage costs by automatically moving your data between four access tiers when your access patterns change\. These four access tiers include two low\-latency access tiers optimized for frequent and infrequent access, and two opt\-in archive access tiers designed for asynchronous access for rarely accessed data\.
