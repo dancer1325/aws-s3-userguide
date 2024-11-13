@@ -1,16 +1,38 @@
 # Amazon S3 now automatically encrypts all new objects<a name="default-encryption-faq"></a>
 
-Amazon S3 now applies server\-side encryption with Amazon S3 managed keys \(SSE\-S3\) as the base level of encryption for every bucket in Amazon S3\. Starting January 5, 2023, all new object uploads to Amazon S3 are automatically encrypted at no additional cost and with no impact on performance\. SSE\-S3, which uses 256\-bit Advanced Encryption Standard \(AES\-256\), is automatically applied to all new buckets and to any existing S3 bucket that doesn't already have default encryption configured\. The automatic encryption status for S3 bucket default encryption configuration and for new object uploads is available in AWS CloudTrail logs, S3 Inventory, S3 Storage Lens, the Amazon S3 console, and as an additional Amazon S3 API response header in the AWS Command Line Interface \(AWS CLI\) and the AWS SDKs\.
+* SSE-S3
+  * == server-side encryption | Amazon S3 managed keys
+  * 👀== base level of encryption / EVERY S3 bucket 👀
+    * from January 5, 2023
+    * == ALL new object uploads | Amazon S3 -> AUTOMATICALLY encrypted / NO
+      * additional cost
+      * impact on performance
+  * how does it work?
+    * AES-256 | ALL
+      * NEW buckets
+      * ANY existing S3 bucket / NO default encryption configured
+  * automatic encryption status | S3 bucket & NEW object uploaded -- is available -- |
+    * AWS CloudTrail logs,
+    * S3 Inventory,
+    * S3 Storage Lens,
+    * Amazon S3 console,
+    * Amazon S3 API response header |
+      * AWS CLI
+      * AWS SDKs
 
-The following sections answer questions about this update\. 
 
-**Does Amazon S3 change the default encryption settings for my existing buckets that already have default encryption configured?**  
-No\. There are no changes to the default encryption configuration for an existing bucket that already has SSE\-S3 or server\-side encryption with AWS Key Management Service \(AWS KMS\) keys \(SSE\-KMS\) configured\. For more information about how to set the default encryption behavior for buckets, see [Setting default server\-side encryption behavior for Amazon S3 buckets](bucket-encryption.md)\. For more information about SSE\-S3 and SSE\-KMS encryption settings, see [Protecting data using server\-side encryption](serv-side-encryption.md)\.
+**Does Amazon S3 change the default encryption settings | existing buckets / ALREADY have default encryption configured?**  
+* No
+* see 
+  * [Setting default server-side encryption behavior | Amazon S3 buckets](bucket-encryption.md)
+  * see [Protecting data -- via -- server\-side encryption](serv-side-encryption.md)
 
-**Is default encryption enabled on my existing buckets that don't have default encryption configured?**  
-Yes\. Amazon S3 now configures default encryption on all existing unencrypted buckets to apply server\-side encryption with S3 managed keys \(SSE\-S3\) as the base level of encryption for new objects uploaded to these buckets\. Objects that are already in an existing unencrypted bucket won't be automatically encrypted\.
+**Is default encryption enabled on my existing buckets / do NOT have default encryption configured?**  
+* Yes
+* 👀Objects / ALREADY | existing unencrypted bucket -> will NOT be automatically encrypted 👀
 
 **How can I view the default encryption status of new object uploads?**  
+* TODO:
 Currently, you can view the default encryption status of new object uploads in AWS CloudTrail logs, S3 Inventory, and S3 Storage Lens, the Amazon S3 console, and as an additional Amazon S3 API response header in the AWS Command Line Interface \(AWS CLI\) and the AWS SDKs\.
 + To view your CloudTrail events, see [Viewing CloudTrail events in the CloudTrail console](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events-console.html) in the *AWS CloudTrail User Guide*\. CloudTrail logs provide API tracking for `PUT` and `POST` requests to Amazon S3\. When default encryption is being used to encrypt objects in your buckets, the CloudTrail logs for `PUT` and `POST` API requests will include the following field as the name\-value pair: `"SSEApplied":"Default_SSE_S3"`\. 
 + To view the automatic encryption status of new object uploads in S3 Inventory, configure an S3 Inventory report to include the **Encryption** metadata field, and then see the encryption status of each new object in the report\. For more information, see [Setting up Amazon S3 Inventory](https://docs.aws.amazon.com/AmazonS3/latest/userguide/configure-inventory.html#storage-inventory-setting-up)\.
