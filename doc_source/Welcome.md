@@ -41,15 +41,28 @@
 
 ### Storage classes<a name="RRS"></a>
 
-* TODO:
-Amazon S3 offers a range of storage classes designed for different use cases\. For example, you can store mission\-critical production data in S3 Standard for frequent access, save costs by storing infrequently accessed data in S3 Standard\-IA or S3 One Zone\-IA, and archive data at the lowest costs in S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive\. 
-
-You can store data with changing or unknown access patterns in S3 Intelligent\-Tiering, which optimizes storage costs by automatically moving your data between four access tiers when your access patterns change\. These four access tiers include two low\-latency access tiers optimized for frequent and infrequent access, and two opt\-in archive access tiers designed for asynchronous access for rarely accessed data\.
-
-For more information, see [Using Amazon S3 storage classes](storage-class-intro.md)\. For more information about S3 Glacier Flexible Retrieval, see the [https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html](https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html)\.
+* 👀EACH storage class / different use case 👀
+  * frequent accessed data | S3 Standard 
+  * infrequently accessed data / save costs |
+    * S3 Standard-IA
+    * S3 One Zone-IA,
+  * archive data / lowest costs |
+    * S3 Glacier Instant Retrieval,
+    * S3 Glacier Flexible Retrieval,
+    * S3 Glacier Deep Archive 
+  * data / changing or unknown access patterns | S3 Intelligent-Tiering
+    * -> if your access patterns change -> data -- is moved automatically between -- 4 access tiers /
+      * 2 low-latency access tiers / 
+        * -- optimized for -- frequent & infrequent access
+      * 2 opt-in archive access tiers / 
+        * -- designed for -- asynchronous access | rarely accessed data
+* see 
+  * [Using Amazon S3 storage classes](storage-class-intro.md)
+  * [S3 Glacier Flexible Retrieval](https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html)
 
 ### Storage management<a name="features-storage-management"></a>
 
+* TODO:
 Amazon S3 has storage management features that you can use to manage costs, meet regulatory requirements, reduce latency, and save multiple distinct copies of your data for compliance requirements\.
 + [S3 Lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html) – Configure a lifecycle configuration to manage your objects and store them cost effectively throughout their lifecycle\. You can transition objects to other S3 storage classes or expire objects that reach the end of their lifetimes\.
 + [S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html) – Prevent Amazon S3 objects from being deleted or overwritten for a fixed amount of time or indefinitely\. You can use Object Lock to help meet regulatory requirements that require *write\-once\-read\-many* *\(WORM\)* storage or to simply add another layer of protection against object changes and deletions\.
