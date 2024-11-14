@@ -1,8 +1,11 @@
 # Using Amazon S3 storage classes<a name="storage-class-intro"></a>
 
-Each object in Amazon S3 has a storage class associated with it\. For example, if you list the objects in an S3 bucket, the console shows the storage class for all the objects in the list\. Amazon S3 offers a range of storage classes for the objects that you store\. You choose a class depending on your use case scenario and performance access requirements\. All of these storage classes offer high durability\. 
-
-The following sections provide details of the various storage classes and how to set the storage class for your objects\.
+* 👀storage class / EACH object | Amazon S3 👀
+  * range of allowed ones
+  * high durability
+  * criteria to choose one
+    * use case scenario
+    * performance access requirements
 
 **Topics**
 + [Storage classes for frequently accessed objects](#sc-freq-data-access)
@@ -15,6 +18,7 @@ The following sections provide details of the various storage classes and how to
 
 ## Storage classes for frequently accessed objects<a name="sc-freq-data-access"></a>
 
+* TODO:
 For performance\-sensitive use cases \(those that require millisecond access time\) and frequently accessed data, Amazon S3 provides the following storage classes:
 + **S3 Standard** – The default storage class\. If you don't specify the storage class when you upload an object, Amazon S3 assigns the S3 Standard storage class\.
 + **Reduced Redundancy** – The Reduced Redundancy Storage \(RRS\) storage class is designed for noncritical, reproducible data that can be stored with less redundancy than the S3 Standard storage class\.
